@@ -10,7 +10,7 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-app.use(cors({ origin: 'https://event-management-frontend-otaa.onrender.com', credentials: true }));
+app.use(cors({ origin: 'https://events-frontend-6hwb.onrender.com', credentials: true }));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
