@@ -10,7 +10,7 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-app.use(cors({ origin: 'https://event-front-h47e.onrender.com', credentials: true }));
+app.use(cors({ origin: 'https://event-management-system-tulr.onrender.com', credentials: true }));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
