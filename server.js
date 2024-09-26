@@ -10,18 +10,6 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
-require('dotenv').config();
-
-const authRoutes = require('./routes/authRoutes');
-const eventRoutes = require('./routes/eventRoutes');
-
-const app = express();
-
-// Middleware
-app.use(express.json());
 
 app.use(cors());
 
