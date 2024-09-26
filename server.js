@@ -9,12 +9,8 @@ const eventRoutes = require('./routes/eventRoutes');
 const app = express();
 
 // Middleware
+app.use(cors({ origin: 'https://your-frontend-service.onrender.com' }));
 app.use(express.json());
-
-const allowedOrigins = [process.env.FRONTEND_URL];
-app.use(cors({
-    origin: allowedOrigins
-}));
 
 // Routes
 app.use('/api/auth', authRoutes);
