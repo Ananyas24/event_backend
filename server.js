@@ -23,19 +23,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 
-// CORS Configuration
-const allowedOrigins = [process.env.FRONTEND_URL]; // Fetch frontend URL from .env
-
-app.use(cors({
-    origin: function (origin, callback) {
-        // Allow requests with no origin (e.g., mobile apps or curl requests)
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    }
-}));
+app.use(cors());
 
 // Routes
 app.use('/api/auth', authRoutes);
