@@ -9,7 +9,7 @@ const eventRoutes = require('./routes/eventRoutes');
 const app = express();
 
 // Middleware
-app.use(cors({ origin: 'https://event-management-x4v9.onrender.com }));
+app.use(cors({ origin: 'https://event-management-x4v9.onrender.com' }));
 app.use(express.json());
 
 // Routes
